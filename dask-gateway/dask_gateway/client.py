@@ -409,6 +409,7 @@ class Gateway(object):
             query = ""
 
         url = "%s/api/v1/clusters/%s" % (self.address, query)
+        print("url is %s" %(url))
         resp = await self._request("GET", url)
         data = await resp.json()
         return [
